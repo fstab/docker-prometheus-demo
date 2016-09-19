@@ -1,4 +1,4 @@
 Prometheus Demo
 ===============
 
-Docker image with Prometheus downloads in `/root/`.
+Ubuntu with Prometheus downloads in `/root/`.
