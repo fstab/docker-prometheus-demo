@@ -17,6 +17,17 @@ RUN git clone https://github.com/prometheus/jmx_exporter && \
 WORKDIR /root
 RUN git clone https://github.com/fstab/prometheus-for-java-developers && \
     cd prometheus-for-java-developers && \
+    git checkout 01-hello-world && \
+    git checkout 02-direct-instrumentation && \
+    git checkout 03a-spring-boot-actuator-enabled && \
+    git checkout 03b-spring-boot-actuator-custom-metric && \
+    git checkout 03c-spring-boot-actuator-prometheus-bridge && \
+    git checkout 04a-jmx-enabled && \
+    git checkout 04b-jmx-custom-metric && \
+    git checkout 04c-jmx-remote-prometheus-bridge && \
+    git checkout 04d-jmx-agent-prometheus-bridge && \
+    git checkout 05-jmx-agent && \
+    git checkout 05a-dropwizard-enabled && \
     git checkout 05b-dropwizard-prometheus-bridge && \
     mvn clean package && \
     git checkout doc
