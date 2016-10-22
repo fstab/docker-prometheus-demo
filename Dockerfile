@@ -14,6 +14,8 @@ RUN git clone https://github.com/prometheus/jmx_exporter && \
     cd .. && \
     rm -rf jmx_exporter
 
+ENV LAST_UPDATE 2016-10-22
+
 WORKDIR /root
 RUN git clone https://github.com/fstab/prometheus-for-java-developers && \
     cd prometheus-for-java-developers && \
@@ -26,7 +28,6 @@ RUN git clone https://github.com/fstab/prometheus-for-java-developers && \
     git checkout 04b-jmx-custom-metric && \
     git checkout 04c-jmx-remote-prometheus-bridge && \
     git checkout 04d-jmx-agent-prometheus-bridge && \
-    git checkout 05-jmx-agent && \
     git checkout 05a-dropwizard-enabled && \
     git checkout 05b-dropwizard-prometheus-bridge && \
     mvn clean package && \
