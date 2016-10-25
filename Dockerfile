@@ -14,7 +14,7 @@ RUN git clone https://github.com/prometheus/jmx_exporter && \
     cd .. && \
     rm -rf jmx_exporter
 
-ENV LAST_UPDATE 2016-10-22
+ENV LAST_UPDATE 2016-10-25
 
 WORKDIR /root
 RUN git clone https://github.com/fstab/prometheus-for-java-developers && \
