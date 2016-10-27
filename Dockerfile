@@ -14,11 +14,12 @@ RUN git clone https://github.com/prometheus/jmx_exporter && \
     cd .. && \
     rm -rf jmx_exporter
 
-ENV LAST_UPDATE 2016-10-25
+ENV LAST_UPDATE 2016-10-27
 
 WORKDIR /root
 RUN git clone https://github.com/fstab/prometheus-for-java-developers && \
     cd prometheus-for-java-developers && \
+    git checkout doc && \
     git checkout 01-hello-world && \
     git checkout 02-direct-instrumentation && \
     git checkout 03a-spring-boot-actuator-enabled && \
@@ -30,8 +31,9 @@ RUN git clone https://github.com/fstab/prometheus-for-java-developers && \
     git checkout 04d-jmx-agent-prometheus-bridge && \
     git checkout 05a-dropwizard-enabled && \
     git checkout 05b-dropwizard-prometheus-bridge && \
+    git checkout all && \
     mvn clean package && \
-    git checkout doc
+    git checkout 61bb984
 
 # node_exporter
 EXPOSE 9100
